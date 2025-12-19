@@ -1,0 +1,10 @@
+.env
+.jacare
+__pycache__/
+*.pyc
+*.log
+venv/
+.venv/
+.streamlit/
+*.xlsx
+*.csv

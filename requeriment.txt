@@ -1,0 +1,6 @@
+streamlit
+pandas
+psycopg2
+psycopg2.extras
+hashlib
+base64
