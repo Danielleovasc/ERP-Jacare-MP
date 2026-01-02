@@ -1,11 +1,12 @@
-name: Sync to Hugging Face
+name: Sync to Hugging Face hub
 on:
   push:
-    branches: [main] # ou a sua branch principal
-  force_push_allowance: true
+    branches: [main]
+  # Permite rodar manualmente se precisar
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  sync-to-hub:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://Danielleonel:$HF_TOKEN@huggingface.co/spaces/Danielleonel/erp-mp-jacare main
+        run: git push --force https://Danielleonel:$HF_TOKEN@huggingface.co/spaces/Danielleonel/jacarempweb main
